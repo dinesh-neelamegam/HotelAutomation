@@ -3,11 +3,11 @@ package HotelAutomation.corridor;
 import HotelAutomation.equipments.AirConditioner;
 import HotelAutomation.equipments.Light;
 
-public class MainCorridor {
-    Light light = new Light();
+public class SubCorridor {
     AirConditioner ac = new AirConditioner();
+    Light light = new Light();
 
-    public MainCorridor(){}
+    public SubCorridor(){};
 
     public void lightOn(){
         light.on();
