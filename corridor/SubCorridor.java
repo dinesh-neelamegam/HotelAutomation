@@ -1,35 +1,33 @@
-package HotelAutomation.corridor;
+package hotelAutomation.corridor;
 
-import HotelAutomation.equipments.AirConditioner;
-import HotelAutomation.equipments.Light;
+import hotelAutomation.equipments.AirConditioner;
+import hotelAutomation.equipments.Light;
 
 public class SubCorridor {
-    AirConditioner ac = new AirConditioner();
-    Light light = new Light();
+    private AirConditioner ac = new AirConditioner();
+    private Light light = new Light("OFF");
+    private int max_unit = 10;
 
     public SubCorridor(){};
 
-    public void lightOn(){
-        light.on();
+    public Light getLight(){
+        return light;
     }
 
-    public void lightOff(){
-        light.off();
+    public AirConditioner getAc(){
+        return ac;
     }
 
-    public int getLightState(){
-        return light.getState();
+    public int getMaxUnit() {
+        return max_unit;
     }
 
-    public void acOn(){
-        ac.on();
+    public int getDefaultUnit() {
+        return ac.getUnitConsumption();
     }
 
-    public void acOff(){
-        ac.off();
-    }
-
-    public int getAcState(){
-        return ac.getState();
+    public void printState() {
+        System.out.print(" Light : "+light.getState());
+        System.out.println(" AC : "+ac.getState());
     }
 }
