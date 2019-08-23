@@ -1,4 +1,4 @@
-package HotelAutomation.exception;
+package hotelAutomation.exception;
 
 public class InvalidCorridorNumber extends Exception {
 

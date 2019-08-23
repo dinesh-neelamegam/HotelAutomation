@@ -1,4 +1,4 @@
-package HotelAutomation.exception;
+package hotelAutomation.exception;
 
 public class HotelAutomationException extends RuntimeException {
     public HotelAutomationException(ERROR_MESSAGE error_message){
