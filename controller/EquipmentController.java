@@ -1,9 +1,9 @@
-package HotelAutomation.controller;
+package hotelAutomation.controller;
 
-import HotelAutomation.Automation;
+import hotelAutomation.HotelAutomation;
 
 public class EquipmentController {
-    public static Controller getController(Automation automation){
+    public static Controller getController(HotelAutomation automation){
         return new LightController(automation);
     }
 }

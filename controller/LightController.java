@@ -1,23 +1,23 @@
-package HotelAutomation.controller;
+package hotelAutomation.controller;
 
-import HotelAutomation.Automation;
+import hotelAutomation.HotelAutomation;
 
 public class LightController extends Controller {
-    Automation automation;
+    HotelAutomation automation;
 
-    public LightController(Automation automation){
+    public LightController(HotelAutomation automation){
         this.automation = automation;
     }
 
     @Override
     public void movement(int floor_no, int sub_corridor) {
-        automation.getFloors().get(floor_no).getSubCorridors().get(sub_corridor).lightOn();
+        automation.getFloors().get(floor_no).movement(sub_corridor);
         automation.printStatus();
     }
 
     @Override
     public void noMovement(int floor_no, int sub_corridor) {
-        automation.getFloors().get(floor_no).getSubCorridors().get(sub_corridor).lightOff();
+        automation.getFloors().get(floor_no).noMovement(sub_corridor);
         automation.printStatus();
     }
 }
