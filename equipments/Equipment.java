@@ -1,17 +1,29 @@
-package HotelAutomation.equipments;
+package hotelAutomation.equipments;
 
-public class Equipment {
-    private int button = 1;
+public abstract class Equipment {
+    private String button = "ON";
 
-    public int on() {
-        return (button = 1);
+    public Equipment(){}
+
+    public Equipment(String flag){
+        this.button = flag;
     }
 
-    public int off() {
-        return (button = 0);
+    public String on() {
+        return (button = "ON");
     }
 
-    public int getState(){
+    public String off() {
+        return (button = "OFF");
+    }
+
+    public abstract int getUnitConsumption();
+
+    public String getState(){
         return button;
+    }
+
+    public boolean isOn(){
+        return button.equals("ON");
     }
 }
